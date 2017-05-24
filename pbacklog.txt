@@ -1,0 +1,4 @@
+## product backlog ####
+
+01. O sosftware deve prover mecanismo para gerenciar usuarios
+02. O usuário precisa se autenticar no sistema
