@@ -2,3 +2,9 @@
 
 01. O sosftware deve prover mecanismo para gerenciar usuarios
 02. O usuário precisa se autenticar no sistema
+quantidade atual, 
+quantidade reservada
+Disponível
+Em compra
+Estoque mínimo
+Ponto de reposição
