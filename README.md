@@ -4,7 +4,8 @@
 
 ### Configure o banco de dados (postgres)
 - Crie uma database com o nome de "sw2"
-- Abra o arquivo "persistence.xml" (localizado em src/main/resources) e **se necessário altere o usuario, senha e porta.**
+- Abra o arquivo "persistence.xml" (localizado em src/main/resources) 
+  e **se necessário altere o usuario, senha e porta.**
 
 
 Exemplo de configuração __(src/main/resources/persistence.xml)__
