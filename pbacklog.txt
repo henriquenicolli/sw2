@@ -1,4 +1,4 @@
-## product backlog #####################
+﻿## product backlog #####################
 ##  Software para controle de estoque ##
 
 
@@ -9,6 +9,7 @@
 05. O Software deve gerenciar pagamentos (a receber, recebidos, a fazer e feitos)
 06. O software deve manter produtos
 07. O software deve manter usuários do sistema
+08. O software deve permitir remover itens do estoque.
 
 quantidade atual, 
 quantidade reservada
