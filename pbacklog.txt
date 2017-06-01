@@ -13,6 +13,7 @@
 09. O software deve permitr adicionar produtos
 10. O software deve gerar relatórios dos produtos disponíveis
 11. O software deve manter funcionários
+12. O software deve gerar relatorios dos produtos indisponiveis
 
 quantidade atual, 
 quantidade reservada
