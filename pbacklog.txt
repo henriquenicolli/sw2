@@ -1,7 +1,10 @@
-## product backlog ####
+## product backlog #####################
+##  Software para controle de estoque ##
 
-01. O sosftware deve prover mecanismo para gerenciar usuarios
+
+01. O software deve prover mecanismo para gerenciar usuarios
 02. O usuário precisa se autenticar no sistema
+
 quantidade atual, 
 quantidade reservada
 Disponível
