@@ -7,7 +7,7 @@
 03. O Software deve manter clientes
 04. O Software deve manter fornecedores
 05. O Software deve gerenciar pagamentos (a receber, recebidos, a fazer e feitos)
-06. O software deve manter produtos
+06. O software deve cadastrar produtos
 07. O Software deve gerenciar o transporte dos produtos (para o recebimento e entrega)
 08. O software deve permitir remover itens do estoque.
 09. O software deve permitr adicionar produtos
@@ -16,6 +16,7 @@
 12. o software deve gerar relatórios dos produtos vendidos
 13. O software deve gerar relatorios dos produtos indisponiveis
 15. O sistema pode gerar um relatório especifico de fornecedores.
+
 
 quantidade atual, 
 quantidade reservada
