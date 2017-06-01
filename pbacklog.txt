@@ -9,7 +9,12 @@
 05. O Software deve gerenciar pagamentos (a receber, recebidos, a fazer e feitos)
 06. O software deve manter produtos
 07. O software deve manter usuários do sistema
+<<<<<<< HEAD
 08. O Software deve gerenciar o transporte dos produtos (para o recebimento e entrega)
+=======
+08. O software deve permitir remover itens do estoque.
+09. O software deve permitr adicionar produtos
+>>>>>>> 2545c4c84b2e950bcfcb8434aee77c78bc309df9
 
 quantidade atual, 
 quantidade reservada
