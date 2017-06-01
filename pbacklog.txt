@@ -1,4 +1,4 @@
-## product backlog #####################
+﻿## product backlog #####################
 ##  Software para controle de estoque ##
 
 
@@ -7,7 +7,7 @@
 03. O Software deve manter clientes
 04. O Software deve manter fornecedores
 05. O Software deve gerenciar pagamentos (a receber, recebidos, a fazer e feitos)
-06. O software deve manter produtos
+06. O software deve cadastrar produtos
 07. O Software deve gerenciar o transporte dos produtos (para o recebimento e entrega)
 08. O software deve permitir remover itens do estoque.
 09. O software deve permitr adicionar produtos
