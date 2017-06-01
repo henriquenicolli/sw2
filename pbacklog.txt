@@ -1,4 +1,4 @@
-﻿## product backlog #####################
+## product backlog #####################
 ##  Software para controle de estoque ##
 
 
@@ -11,6 +11,7 @@
 07. O Software deve gerenciar o transporte dos produtos (para o recebimento e entrega)
 08. O software deve permitir remover itens do estoque.
 09. O software deve permitr adicionar produtos
+10. O software deve gerar relatórios dos produtos disponíveis
 
 quantidade atual, 
 quantidade reservada
