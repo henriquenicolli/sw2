@@ -11,3 +11,9 @@ Disponível
 Em compra
 Estoque mínimo
 Ponto de reposição
+
+
+12. O Software deve manter clientes
+13. O Software deve manter fornecedores
+14. O Software deve gerenciar pagamentos (a receber, recebidos, a fazer e feitos)
+15. O software deve manter produtos
