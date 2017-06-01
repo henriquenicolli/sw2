@@ -14,6 +14,7 @@
 10. O software deve gerar relatórios dos produtos disponíveis
 11. O software deve manter funcionários
 12. o software deve gerar relatórios dos produtos vendidos
+13. O sistema pode gerar um relatório especifico de fornecedores.
 
 quantidade atual, 
 quantidade reservada
