@@ -5,8 +5,8 @@
  */
 package br.com.gui;
 
-import br.com.DAO.ProdutosDAO;
-import br.com.modelo.Produtos;
+import br.com.DAO.ProdutoDAO;
+import br.com.modelo.Produto;
 
 /**
  *
@@ -131,15 +131,16 @@ public class CadastroProduto extends javax.swing.JFrame {
 
     private void JBCadastrarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCadastrarProdutoActionPerformed
         
-        ProdutosDAO produtosDAO = new ProdutosDAO();
-        Produtos produtos = new Produtos();
+        ProdutoDAO produtoDAO = new ProdutoDAO();
+        Produto produto = new Produto();
         
         
-        produtos.setCodigoProduto(Integer.parseInt(JTCodigoProduto.getText()));
-        produtos.setNome(JTNomeProduto.getText());
-        produtos.setDescricao(JTDescricaoProduto.getText());
-        produtos.setCategoria(JTCategoria.getText());
-        produtosDAO.persist(produtos);
+        produto.setCodigoProduto(Integer.parseInt(JTCodigoProduto.getText()));
+        produto.setNome(JTNomeProduto.getText());
+        produto.setDescricao(JTDescricaoProduto.getText());
+        produto.setCategoria(JTCategoria.getText());
+        produtoDAO.salvar(produto);
+        
         System.out.println("Produto cadastrado");
         
     }//GEN-LAST:event_JBCadastrarProdutoActionPerformed
