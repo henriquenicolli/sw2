@@ -4,6 +4,10 @@
 
 01. O software deve prover mecanismo para gerenciar usuarios
 02. O usuário precisa se autenticar no sistema
+03. O Software deve manter clientes
+04. O Software deve manter fornecedores
+05. O Software deve gerenciar pagamentos (a receber, recebidos, a fazer e feitos)
+06. O software deve manter produtos
 
 quantidade atual, 
 quantidade reservada
@@ -11,9 +15,3 @@ Disponível
 Em compra
 Estoque mínimo
 Ponto de reposição
-
-
-12. O Software deve manter clientes
-13. O Software deve manter fornecedores
-14. O Software deve gerenciar pagamentos (a receber, recebidos, a fazer e feitos)
-15. O software deve manter produtos
