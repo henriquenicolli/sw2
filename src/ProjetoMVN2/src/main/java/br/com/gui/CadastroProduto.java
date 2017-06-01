@@ -146,7 +146,7 @@ public class CadastroProduto extends javax.swing.JFrame {
     }//GEN-LAST:event_JBCadastrarProdutoActionPerformed
 
     private void JBVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBVoltarActionPerformed
-        new Menu().setVisible(true);
+        new Principal().setVisible(true);
 
     }//GEN-LAST:event_JBVoltarActionPerformed
 
