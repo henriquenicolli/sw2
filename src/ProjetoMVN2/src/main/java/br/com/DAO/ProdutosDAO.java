@@ -5,7 +5,7 @@
  */
 package br.com.DAO;
 
-import br.com.modelo.Produto;
+import br.com.modelo.Produtos;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -16,7 +16,7 @@ import javax.persistence.Persistence;
  */
 public class ProdutosDAO {
 
-    public void persist(Produto produto) {
+    public void persist(Produtos produto) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("trabalho");
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
