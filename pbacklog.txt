@@ -10,6 +10,7 @@
 06. O software deve manter produtos
 07. O software deve manter usuários do sistema
 08. O software deve permitir remover itens do estoque.
+09. O software deve permitr adicionar produtos
 
 quantidade atual, 
 quantidade reservada
