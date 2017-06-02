@@ -28,17 +28,18 @@ public class Principal extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        JBCadastrarProduto = new javax.swing.JButton();
+        JBAdicionarProduto = new javax.swing.JButton();
         JBCadastrarProduto1 = new javax.swing.JButton();
+        JBCadastrarProduto2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Estoque");
 
-        JBCadastrarProduto.setText("Cadastrar Produto");
-        JBCadastrarProduto.addActionListener(new java.awt.event.ActionListener() {
+        JBAdicionarProduto.setText("Adicionar Produtos no estoque");
+        JBAdicionarProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JBCadastrarProdutoActionPerformed(evt);
+                JBAdicionarProdutoActionPerformed(evt);
             }
         });
 
@@ -49,20 +50,35 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        JBCadastrarProduto2.setText("Cadastrar Produto");
+        JBCadastrarProduto2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBCadastrarProduto2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(157, 157, 157)
-                .addComponent(jLabel1)
-                .addContainerGap(198, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(JBCadastrarProduto)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(21, 255, Short.MAX_VALUE)
                 .addComponent(JBCadastrarProduto1)
                 .addGap(16, 16, 16))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(157, 157, 157)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(JBAdicionarProduto)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(31, 31, 31)
+                    .addComponent(JBCadastrarProduto2)
+                    .addContainerGap(242, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -70,24 +86,35 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JBCadastrarProduto)
-                    .addComponent(JBCadastrarProduto1))
-                .addContainerGap(215, Short.MAX_VALUE))
+                .addComponent(JBCadastrarProduto1)
+                .addGap(44, 44, 44)
+                .addComponent(JBAdicionarProduto)
+                .addContainerGap(148, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(68, 68, 68)
+                    .addComponent(JBCadastrarProduto2)
+                    .addContainerGap(205, Short.MAX_VALUE)))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void JBCadastrarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCadastrarProdutoActionPerformed
-        new CadastroProduto().setVisible(true);
-    }//GEN-LAST:event_JBCadastrarProdutoActionPerformed
+    private void JBAdicionarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBAdicionarProdutoActionPerformed
+        new AdicionaProdutoEstoque().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_JBAdicionarProdutoActionPerformed
 
     private void JBCadastrarProduto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCadastrarProduto1ActionPerformed
          new GerenciarUsuario().setVisible(true);
           this.setVisible(false);
     }//GEN-LAST:event_JBCadastrarProduto1ActionPerformed
+
+    private void JBCadastrarProduto2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCadastrarProduto2ActionPerformed
+        new CadastroProduto().setVisible(true);
+          this.setVisible(false);
+    }//GEN-LAST:event_JBCadastrarProduto2ActionPerformed
 
    public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -121,8 +148,9 @@ public class Principal extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton JBCadastrarProduto;
+    private javax.swing.JButton JBAdicionarProduto;
     private javax.swing.JButton JBCadastrarProduto1;
+    private javax.swing.JButton JBCadastrarProduto2;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
