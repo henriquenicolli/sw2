@@ -42,8 +42,8 @@ public class UsuarioDAO {
 
     public boolean autenticar(String usuario, String senha) {
         EntityManager manager = new JPAUtil().getEntityManager();
-        List<Usuario> list = manager.createQuery("SELECT u FROM Usuario u WHERE u.usuario = :usuario AND u.senha = :senha").
-                setParameter("usuario", usuario)
+        List<Usuario> list = manager.createQuery("SELECT u FROM Usuario u WHERE u.usuario = :usuario AND u.senha = :senha")
+                .setParameter("usuario", usuario)
                 .setParameter("senha", senha)
                 .getResultList();
         manager.close();
