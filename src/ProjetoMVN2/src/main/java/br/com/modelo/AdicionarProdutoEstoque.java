@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package br.com.modelo;
 
 import java.io.Serializable;
@@ -10,23 +11,20 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
 /**
  *
- * @author Andressa
+ * @author Lua
  */
 @Entity
-public class Produto implements Serializable {
-
+public class AdicionarProdutoEstoque implements Serializable{
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-     Long id;
+    private Long id;
     private int CodigoProduto;
     private String nome;
-    private  String descricao;
-    private String categoria;
-    private int qtdProduto;
+    private int quantidade;
+
     public int getCodigoProduto() {
         return CodigoProduto;
     }
@@ -43,32 +41,13 @@ public class Produto implements Serializable {
         this.nome = nome;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public int getQuantidade() {
+        return quantidade;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
     }
-
-    public String getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
-
-    public int getQtdProduto() {
-        return qtdProduto;
-    }
-
-    public void setQtdProduto(int qtdProduto) {
-        this.qtdProduto = qtdProduto;
-    }
-    
-    
-
     public Long getId() {
         return id;
     }
@@ -87,10 +66,10 @@ public class Produto implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Produto)) {
+        if (!(object instanceof AdicionarProdutoEstoque)) {
             return false;
         }
-        Produto other = (Produto) object;
+        AdicionarProdutoEstoque other = (AdicionarProdutoEstoque) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -99,7 +78,9 @@ public class Produto implements Serializable {
 
     @Override
     public String toString() {
-        return "br.com.modelo.CadastroProduto[ id=" + id + " ]";
+        return "br.com.modelo.AdicionarProdutoEstoque[ id=" + id + " ]";
     }
     
 }
+
+    
