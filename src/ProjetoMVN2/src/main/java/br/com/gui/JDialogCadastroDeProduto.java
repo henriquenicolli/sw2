@@ -7,6 +7,7 @@ package br.com.gui;
 
 import br.com.DAO.ProdutoDAO;
 import br.com.modelo.Produto;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -16,6 +17,7 @@ public class JDialogCadastroDeProduto extends javax.swing.JDialog {
 
     /**
      * Creates new form JDialogCadastroDeProduto
+     *
      * @param parent
      * @param modal
      */
@@ -36,17 +38,18 @@ public class JDialogCadastroDeProduto extends javax.swing.JDialog {
         jLabel1 = new javax.swing.JLabel();
         JBVoltar = new javax.swing.JButton();
         JLCodigoProduto = new javax.swing.JLabel();
-        JTCodigoProduto = new javax.swing.JTextField();
-        JTNomeProduto = new javax.swing.JTextField();
+        tfCodigoProduto = new javax.swing.JTextField();
+        tfNomeProduto = new javax.swing.JTextField();
         JLNomeProduto = new javax.swing.JLabel();
         JLDescricaoProduto = new javax.swing.JLabel();
-        JTDescricaoProduto = new javax.swing.JTextField();
-        JTCategoria = new javax.swing.JTextField();
+        tfDescricaoProduto = new javax.swing.JTextField();
+        tfCategoria = new javax.swing.JTextField();
         JLCategoria = new javax.swing.JLabel();
         JBCadastrarProduto = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Cadastro de Usuário");
+        setTitle("Cadastro de Produto");
         setMaximumSize(new java.awt.Dimension(400, 300));
         setMinimumSize(new java.awt.Dimension(400, 300));
         setResizable(false);
@@ -65,16 +68,16 @@ public class JDialogCadastroDeProduto extends javax.swing.JDialog {
 
         JLCodigoProduto.setText("Código:");
         getContentPane().add(JLCodigoProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 62, 50, -1));
-        getContentPane().add(JTCodigoProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 59, 243, -1));
-        getContentPane().add(JTNomeProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 108, 243, -1));
+        getContentPane().add(tfCodigoProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 59, 243, -1));
+        getContentPane().add(tfNomeProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 108, 243, -1));
 
         JLNomeProduto.setText("Nome:");
         getContentPane().add(JLNomeProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 111, 50, -1));
 
         JLDescricaoProduto.setText("Descrição:");
         getContentPane().add(JLDescricaoProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 152, -1, -1));
-        getContentPane().add(JTDescricaoProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 149, 243, -1));
-        getContentPane().add(JTCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 187, 243, -1));
+        getContentPane().add(tfDescricaoProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 149, 243, -1));
+        getContentPane().add(tfCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 187, 243, -1));
 
         JLCategoria.setText("Categoria:");
         getContentPane().add(JLCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 68, -1));
@@ -85,7 +88,15 @@ public class JDialogCadastroDeProduto extends javax.swing.JDialog {
                 JBCadastrarProdutoActionPerformed(evt);
             }
         });
-        getContentPane().add(JBCadastrarProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(204, 250, -1, -1));
+        getContentPane().add(JBCadastrarProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, -1, -1));
+
+        jButton1.setText("Limpar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, -1, -1));
 
         setSize(new java.awt.Dimension(416, 338));
         setLocationRelativeTo(null);
@@ -97,18 +108,26 @@ public class JDialogCadastroDeProduto extends javax.swing.JDialog {
 
     private void JBCadastrarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCadastrarProdutoActionPerformed
 
-        ProdutoDAO produtoDAO = new ProdutoDAO();
-        Produto produto = new Produto();
+        if (verificarCampos()) {
+            ProdutoDAO produtoDAO = new ProdutoDAO();
+            Produto produto = new Produto();
 
-        produto.setCodigoProduto(Integer.parseInt(JTCodigoProduto.getText()));
-        produto.setNome(JTNomeProduto.getText());
-        produto.setDescricao(JTDescricaoProduto.getText());
-        produto.setCategoria(JTCategoria.getText());
-        produtoDAO.salvar(produto);
+            produto.setCodigoProduto(Integer.parseInt(tfCodigoProduto.getText()));
+            produto.setNome(tfNomeProduto.getText());
+            produto.setDescricao(tfDescricaoProduto.getText());
+            produto.setCategoria(tfCategoria.getText());
+            produtoDAO.salvar(produto);
 
-        System.out.println("Produto cadastrado");
+            System.out.println("Produto cadastrado! ");
+        } else {
+            JOptionPane.showMessageDialog(this, "Contem campo vazio ou tipo incorreto de dados! ");
+        }
 
     }//GEN-LAST:event_JBCadastrarProdutoActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        limpar();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JBCadastrarProduto;
@@ -117,10 +136,27 @@ public class JDialogCadastroDeProduto extends javax.swing.JDialog {
     private javax.swing.JLabel JLCodigoProduto;
     private javax.swing.JLabel JLDescricaoProduto;
     private javax.swing.JLabel JLNomeProduto;
-    private javax.swing.JTextField JTCategoria;
-    private javax.swing.JTextField JTCodigoProduto;
-    private javax.swing.JTextField JTDescricaoProduto;
-    private javax.swing.JTextField JTNomeProduto;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField tfCategoria;
+    private javax.swing.JTextField tfCodigoProduto;
+    private javax.swing.JTextField tfDescricaoProduto;
+    private javax.swing.JTextField tfNomeProduto;
     // End of variables declaration//GEN-END:variables
+
+    private void limpar() {
+
+        tfCodigoProduto.setText("");
+        tfCategoria.setText("");
+        tfDescricaoProduto.setText("");
+        tfNomeProduto.setText("");
+    }
+
+    private boolean verificarCampos() {
+        return (!tfCategoria.getText().isEmpty()
+                && !tfCodigoProduto.getText().isEmpty()
+                && !tfDescricaoProduto.getText().isEmpty()
+                && !tfNomeProduto.getText().isEmpty());
+
+    }
 }

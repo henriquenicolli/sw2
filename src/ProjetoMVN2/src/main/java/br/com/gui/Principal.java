@@ -6,6 +6,8 @@
 package br.com.gui;
 
 import br.com.util.BibliotecaUtil;
+import javax.swing.JButton;
+import javax.swing.JMenuItem;
 
 /**
  *
@@ -29,6 +31,15 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        tbPrincipal = new javax.swing.JToolBar();
+        btCadastrarCliente = new javax.swing.JButton();
+        jSeparator3 = new javax.swing.JToolBar.Separator();
+        jButton3 = new javax.swing.JButton();
+        jSeparator4 = new javax.swing.JToolBar.Separator();
+        jButton2 = new javax.swing.JButton();
+        jSeparator5 = new javax.swing.JToolBar.Separator();
+        jButton4 = new javax.swing.JButton();
+        lbStatus = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -47,7 +58,108 @@ public class Principal extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        tbPrincipal.setFloatable(false);
+        tbPrincipal.setRollover(true);
+        tbPrincipal.setMaximumSize(new java.awt.Dimension(640, 50));
+        tbPrincipal.setMinimumSize(new java.awt.Dimension(640, 50));
+        tbPrincipal.setName(""); // NOI18N
+        tbPrincipal.setNextFocusableComponent(this);
+        tbPrincipal.setPreferredSize(new java.awt.Dimension(640, 50));
+
+        btCadastrarCliente.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        btCadastrarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/boss_32.png"))); // NOI18N
+        btCadastrarCliente.setToolTipText("Cadastrar Cliente");
+        btCadastrarCliente.setFocusable(false);
+        btCadastrarCliente.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btCadastrarCliente.setMaximumSize(new java.awt.Dimension(50, 50));
+        btCadastrarCliente.setMinimumSize(new java.awt.Dimension(50, 50));
+        btCadastrarCliente.setPreferredSize(new java.awt.Dimension(50, 50));
+        btCadastrarCliente.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btCadastrarCliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btCadastrarClienteMouseEntered(evt);
+            }
+        });
+        btCadastrarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btCadastrarClienteActionPerformed(evt);
+            }
+        });
+        tbPrincipal.add(btCadastrarCliente);
+        tbPrincipal.add(jSeparator3);
+
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/network_32.png"))); // NOI18N
+        jButton3.setToolTipText("Gerenciar Usuário");
+        jButton3.setFocusable(false);
+        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton3.setMaximumSize(new java.awt.Dimension(50, 50));
+        jButton3.setMinimumSize(new java.awt.Dimension(50, 50));
+        jButton3.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton3MouseEntered(evt);
+            }
+        });
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        tbPrincipal.add(jButton3);
+        tbPrincipal.add(jSeparator4);
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/archive_32.png"))); // NOI18N
+        jButton2.setToolTipText("Cadastrar Produto");
+        jButton2.setFocusable(false);
+        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton2.setMaximumSize(new java.awt.Dimension(50, 50));
+        jButton2.setMinimumSize(new java.awt.Dimension(50, 50));
+        jButton2.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton2MouseEntered(evt);
+            }
+        });
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        tbPrincipal.add(jButton2);
+        tbPrincipal.add(jSeparator5);
+
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/box_32.png"))); // NOI18N
+        jButton4.setToolTipText("Adicionar ao Estoque");
+        jButton4.setFocusable(false);
+        jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton4MouseEntered(evt);
+            }
+        });
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        tbPrincipal.add(jButton4);
+
+        getContentPane().add(tbPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 50));
+
+        lbStatus.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbStatus.setForeground(new java.awt.Color(102, 102, 102));
+        lbStatus.setText("status");
+        getContentPane().add(lbStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 440, 640, 20));
+
         jMenu1.setText("Cadastrar");
+        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jMenu1MouseEntered(evt);
+            }
+        });
 
         jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.SHIFT_MASK));
         jMenuItem1.setText("Produto");
@@ -81,6 +193,11 @@ public class Principal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Gerenciar ");
+        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jMenu2MouseEntered(evt);
+            }
+        });
 
         jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.ALT_MASK));
         jMenuItem4.setText("Gerenciar Usuário");
@@ -116,6 +233,46 @@ public class Principal extends javax.swing.JFrame {
         BibliotecaUtil.abrirJDialogCentralizado(new JDialogGerenciarUsuario(this, true));
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
+    private void btCadastrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadastrarClienteActionPerformed
+        BibliotecaUtil.abrirJDialogCentralizado(new JDialogCliente(this, true));
+    }//GEN-LAST:event_btCadastrarClienteActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        BibliotecaUtil.abrirJDialogCentralizado(new JDialogGerenciarUsuario(this, true));
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        BibliotecaUtil.abrirJDialogCentralizado(new JDialogCadastroDeProduto(this, true));
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        BibliotecaUtil.abrirJDialogCentralizado(new JDialogAdicionarProdutoAoEstoque(this, true));
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void btCadastrarClienteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btCadastrarClienteMouseEntered
+        lbStatus.setText(((JButton) evt.getSource()).getToolTipText());
+    }//GEN-LAST:event_btCadastrarClienteMouseEntered
+
+    private void jButton3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseEntered
+        lbStatus.setText(((JButton) evt.getSource()).getToolTipText());
+    }//GEN-LAST:event_jButton3MouseEntered
+
+    private void jButton2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseEntered
+        lbStatus.setText(((JButton) evt.getSource()).getToolTipText());
+    }//GEN-LAST:event_jButton2MouseEntered
+
+    private void jButton4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseEntered
+        lbStatus.setText(((JButton) evt.getSource()).getToolTipText());
+    }//GEN-LAST:event_jButton4MouseEntered
+
+    private void jMenu1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseEntered
+        lbStatus.setText(((JMenuItem) evt.getSource()).getText());
+    }//GEN-LAST:event_jMenu1MouseEntered
+
+    private void jMenu2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseEntered
+        lbStatus.setText(((JMenuItem) evt.getSource()).getText());
+    }//GEN-LAST:event_jMenu2MouseEntered
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -146,6 +303,10 @@ public class Principal extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btCadastrarCliente;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
@@ -155,5 +316,10 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
+    private javax.swing.JToolBar.Separator jSeparator3;
+    private javax.swing.JToolBar.Separator jSeparator4;
+    private javax.swing.JToolBar.Separator jSeparator5;
+    private javax.swing.JLabel lbStatus;
+    private javax.swing.JToolBar tbPrincipal;
     // End of variables declaration//GEN-END:variables
 }

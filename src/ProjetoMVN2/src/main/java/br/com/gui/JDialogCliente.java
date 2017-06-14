@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.gui;
 
 import br.com.DAO.ClienteDAO;
@@ -50,7 +45,7 @@ public class JDialogCliente extends javax.swing.JDialog {
         JBVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Cliente");
+        setTitle("Gerenciar Cliente");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(tfNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 107, -1));
@@ -112,9 +107,9 @@ public class JDialogCliente extends javax.swing.JDialog {
             ClienteDAO.getInstance().removeById(Integer.parseInt(tfId.getText()));
             clearFields();
             JOptionPane.showMessageDialog(this, "Removido com sucesso !");
-        }else{
+        } else {
             JOptionPane.showMessageDialog(this, "ID não informado! ");
-            
+
         }
     }//GEN-LAST:event_btnRemoverActionPerformed
 
@@ -146,9 +141,6 @@ public class JDialogCliente extends javax.swing.JDialog {
         dispose();
     }//GEN-LAST:event_JBVoltarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JBVoltar;

@@ -1,6 +1,7 @@
 
 package br.com.modelo;
 
+import java.io.Serializable;
   import javax.persistence.Column;
   import javax.persistence.Entity;
   import javax.persistence.Id;
@@ -8,7 +9,7 @@ package br.com.modelo;
    
   @Entity
   @Table(name = "cliente")
-  public class Cliente {
+  public class Cliente implements Serializable{
    
            @Id
            private int id;

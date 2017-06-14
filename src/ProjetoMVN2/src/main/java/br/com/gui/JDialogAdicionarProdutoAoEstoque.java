@@ -17,6 +17,7 @@ public class JDialogAdicionarProdutoAoEstoque extends javax.swing.JDialog {
 
     /**
      * Creates new form JDialogAdicionarProdutoAoEstoque
+     *
      * @param parent
      * @param modal
      */
@@ -36,8 +37,8 @@ public class JDialogAdicionarProdutoAoEstoque extends javax.swing.JDialog {
 
         JBVoltar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        CBPro = new javax.swing.JComboBox<>();
-        jTqtd = new javax.swing.JTextField();
+        cbProduto = new javax.swing.JComboBox<>();
+        tfQtd = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
@@ -58,13 +59,13 @@ public class JDialogAdicionarProdutoAoEstoque extends javax.swing.JDialog {
         jLabel1.setText("Produto:");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 51, -1, -1));
 
-        CBPro.addActionListener(new java.awt.event.ActionListener() {
+        cbProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CBProActionPerformed(evt);
+                cbProdutoActionPerformed(evt);
             }
         });
-        getContentPane().add(CBPro, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 48, 241, -1));
-        getContentPane().add(jTqtd, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 122, 70, -1));
+        getContentPane().add(cbProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 48, 241, -1));
+        getContentPane().add(tfQtd, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 122, 70, -1));
 
         jLabel2.setText("Adicionar:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 125, -1, -1));
@@ -86,34 +87,45 @@ public class JDialogAdicionarProdutoAoEstoque extends javax.swing.JDialog {
         this.setVisible(false);
     }//GEN-LAST:event_JBVoltarActionPerformed
 
-    private void CBProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBProActionPerformed
+    private void cbProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbProdutoActionPerformed
 
-    }//GEN-LAST:event_CBProActionPerformed
+    }//GEN-LAST:event_cbProdutoActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        AdicionarProdutoEstoque addpro = new AdicionarProdutoEstoque();
-        AdiocionarProdutoEstoqueDAO adiciona = new AdiocionarProdutoEstoqueDAO();
-        String cod;
-        int codigo;
-        cod = CBPro.getSelectedItem().toString();
-        int pos = cod.indexOf("-");
+        if (verificarCampos()) {
 
-        codigo = Integer.parseInt(cod.substring(0, pos));
-        addpro.setCodigoProduto(codigo);
-        addpro.setNome(cod.substring(pos+1));
-        addpro.setQuantidade(Integer.parseInt(jTqtd.getText()));
-        adiciona.salvar(addpro);
-        JOptionPane.showMessageDialog(null, "Feito com sucesso!");
+            AdicionarProdutoEstoque addpro = new AdicionarProdutoEstoque();
+            AdiocionarProdutoEstoqueDAO adiciona = new AdiocionarProdutoEstoqueDAO();
+            String cod;
+            int codigo;
+            cod = cbProduto.getSelectedItem().toString();
+            int pos = cod.indexOf("-");
+
+            codigo = Integer.parseInt(cod.substring(0, pos));
+            addpro.setCodigoProduto(codigo);
+            addpro.setNome(cod.substring(pos + 1));
+            addpro.setQuantidade(Integer.parseInt(tfQtd.getText()));
+            adiciona.salvar(addpro);
+            JOptionPane.showMessageDialog(this, "Feito com sucesso!");
+        } else {
+            JOptionPane.showMessageDialog(this, "Contem campo vazio ou tipo incorreto de dado! ");
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
-   
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> CBPro;
     private javax.swing.JButton JBVoltar;
+    private javax.swing.JComboBox<String> cbProduto;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField jTqtd;
+    private javax.swing.JTextField tfQtd;
     // End of variables declaration//GEN-END:variables
+
+    private boolean verificarCampos() {
+
+        return (!tfQtd.getText().isEmpty()&& cbProduto.getSelectedItem()=="");
+    }
+
 }
