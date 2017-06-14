@@ -42,17 +42,28 @@ public class CadastroProduto extends javax.swing.JFrame {
         JBCadastrarProduto = new javax.swing.JButton();
         JBVoltar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Cadastro de Produto");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Cadastro de Produtos");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 14, -1, 16));
 
         JLCodigoProduto.setText("Código:");
+        getContentPane().add(JLCodigoProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 62, 50, -1));
 
         JLNomeProduto.setText("Nome:");
+        getContentPane().add(JLNomeProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 111, 50, -1));
 
         JLDescricaoProduto.setText("Descrição:");
+        getContentPane().add(JLDescricaoProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 152, -1, -1));
+        getContentPane().add(JTCodigoProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 59, 243, -1));
+        getContentPane().add(JTNomeProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 108, 243, -1));
+        getContentPane().add(JTDescricaoProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 149, 243, -1));
+        getContentPane().add(JTCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 187, 243, -1));
 
         JLCategoria.setText("Categoria:");
+        getContentPane().add(JLCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 68, -1));
 
         JBCadastrarProduto.setText("Cadastrar Produto");
         JBCadastrarProduto.addActionListener(new java.awt.event.ActionListener() {
@@ -60,6 +71,7 @@ public class CadastroProduto extends javax.swing.JFrame {
                 JBCadastrarProdutoActionPerformed(evt);
             }
         });
+        getContentPane().add(JBCadastrarProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(204, 250, -1, -1));
 
         JBVoltar.setText("Voltar");
         JBVoltar.addActionListener(new java.awt.event.ActionListener() {
@@ -67,66 +79,10 @@ public class CadastroProduto extends javax.swing.JFrame {
                 JBVoltarActionPerformed(evt);
             }
         });
+        getContentPane().add(JBVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(JBVoltar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                        .addComponent(jLabel1)
-                        .addGap(122, 122, 122))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(JBCadastrarProduto)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(JLDescricaoProduto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(JLCodigoProduto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(JLNomeProduto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addComponent(JLCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(JTCodigoProduto)
-                                    .addComponent(JTNomeProduto)
-                                    .addComponent(JTDescricaoProduto, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
-                                    .addComponent(JTCategoria))))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JBVoltar))
-                .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JLCodigoProduto)
-                    .addComponent(JTCodigoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JLNomeProduto)
-                    .addComponent(JTNomeProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JLDescricaoProduto)
-                    .addComponent(JTDescricaoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JLCategoria)
-                    .addComponent(JTCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                .addComponent(JBCadastrarProduto)
-                .addContainerGap())
-        );
-
-        pack();
+        setSize(new java.awt.Dimension(362, 322));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void JBCadastrarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCadastrarProdutoActionPerformed
@@ -146,7 +102,7 @@ public class CadastroProduto extends javax.swing.JFrame {
     }//GEN-LAST:event_JBCadastrarProdutoActionPerformed
 
     private void JBVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBVoltarActionPerformed
-        new Principal().setVisible(true);
+        dispose();
 
     }//GEN-LAST:event_JBVoltarActionPerformed
 
